@@ -81,7 +81,7 @@ const FAQ = [
 function PricingPage() {
   return (
     <>
-      <section className="border-b border-white/10 bg-[#0D1F2D] px-4 py-20 md:px-8 md:py-28 text-white">
+      <section className="border-b border-white/[0.06] bg-[#070B1A] px-4 py-20 md:px-8 md:py-28 text-white">
         <div className="mx-auto max-w-7xl">
           <Eyebrow>Money matters</Eyebrow>
           <h1 className="text-balance text-4xl font-extrabold leading-tight md:text-6xl">
@@ -109,7 +109,7 @@ function PricingPage() {
               className={`flex flex-col rounded-3xl border p-7 shadow-elev ${
                 t.featured
                   ? "border-primary/50 bg-card ring-2 ring-primary/40"
-                  : "border-[#1A1A2E]/10 bg-card"
+                  : "border-white/[0.06] bg-card"
               }`}
             >
               {t.featured && (
@@ -121,7 +121,7 @@ function PricingPage() {
               <p className="mt-3 text-3xl font-extrabold text-primary md:text-4xl">{t.price}</p>
               {t.sub && <p className="mt-1 text-sm text-muted-foreground">{t.sub}</p>}
               <p className="mt-4 text-sm text-muted-foreground">{t.blurb}</p>
-              <div className="mt-5 rounded-xl border border-[#1A1A2E]/10 bg-[#1A1A2E]/5 p-4 text-xs">
+              <div className="mt-5 rounded-xl border border-white/[0.06] bg-white/[0.03] p-4 text-xs">
                 <div className="font-bold uppercase tracking-wider text-primary">Payment</div>
                 <p className="mt-2 text-foreground/90">{t.split}</p>
                 {t.note && <p className="mt-2 text-muted-foreground">{t.note}</p>}
@@ -137,9 +137,9 @@ function PricingPage() {
         <H2>Payment schedule.</H2>
 
         {/* Desktop table */}
-        <div className="mt-10 hidden overflow-hidden rounded-2xl border border-[#1A1A2E]/10 bg-card md:block">
+        <div className="mt-10 hidden overflow-hidden rounded-2xl border border-white/[0.06] bg-card md:block">
           <table className="w-full text-left text-sm">
-            <thead className="bg-[#1A1A2E]/5">
+            <thead className="bg-white/[0.03]">
               <tr>
                 <th className="px-5 py-4 font-semibold">When</th>
                 <th className="px-5 py-4 font-semibold">Individual</th>
@@ -149,7 +149,7 @@ function PricingPage() {
             </thead>
             <tbody>
               {SCHEDULE.map((row, i) => (
-                <tr key={i} className={`border-t border-[#1A1A2E]/10 ${row[0] === "TOTAL" ? "bg-primary/10 font-bold" : ""}`}>
+                <tr key={i} className={`border-t border-white/[0.06] ${row[0] === "TOTAL" ? "bg-primary/10 font-bold" : ""}`}>
                   {row.map((c, j) => (
                     <td key={j} className="px-5 py-4">{c}</td>
                   ))}
@@ -162,7 +162,7 @@ function PricingPage() {
         {/* Mobile stacked */}
         <div className="mt-10 space-y-3 md:hidden">
           {SCHEDULE.map((row, i) => (
-            <div key={i} className={`rounded-2xl border p-5 ${row[0] === "TOTAL" ? "border-primary/40 bg-primary/10" : "border-[#1A1A2E]/10 bg-card"}`}>
+            <div key={i} className={`rounded-2xl border p-5 ${row[0] === "TOTAL" ? "border-primary/40 bg-primary/10" : "border-white/[0.06] bg-card"}`}>
               <div className="text-xs font-bold uppercase tracking-wider text-primary">{row[0]}</div>
               <div className="mt-2 grid grid-cols-3 gap-2 text-sm">
                 <div><div className="text-[10px] text-muted-foreground">Individual</div>{row[1]}</div>
@@ -180,7 +180,7 @@ function PricingPage() {
         <H2>How it works.</H2>
         <ol className="mt-10 space-y-4">
           {STEPS.map((s, i) => (
-            <li key={i} className="flex gap-4 rounded-2xl border border-[#1A1A2E]/10 bg-card p-5">
+            <li key={i} className="flex gap-4 rounded-2xl border border-white/[0.06] bg-card p-5">
               <div className="amber-gradient flex h-10 w-10 shrink-0 items-center justify-center rounded-xl font-bold">{i + 1}</div>
               <p className="text-sm leading-relaxed text-foreground/90 md:text-base">{s}</p>
             </li>
@@ -200,7 +200,7 @@ function PricingPage() {
         <H2>Policies.</H2>
         <ul className="mt-8 grid gap-3 md:grid-cols-2">
           {POLICIES.map((p) => (
-            <li key={p} className="rounded-xl border border-[#1A1A2E]/10 bg-card p-4 text-sm leading-relaxed text-foreground/90">
+            <li key={p} className="rounded-xl border border-white/[0.06] bg-card p-4 text-sm leading-relaxed text-foreground/90">
               {p}
             </li>
           ))}
@@ -214,7 +214,7 @@ function PricingPage() {
         <div className="mx-auto mt-8 max-w-3xl">
           <Accordion type="single" collapsible className="space-y-3">
             {FAQ.map(([q, a], i) => (
-              <AccordionItem key={i} value={`p-${i}`} className="rounded-xl border border-[#1A1A2E]/10 bg-card px-5">
+              <AccordionItem key={i} value={`p-${i}`} className="rounded-xl border border-white/[0.06] bg-card px-5">
                 <AccordionTrigger className="text-left text-sm font-semibold md:text-base">{q}</AccordionTrigger>
                 <AccordionContent className="text-sm text-muted-foreground">{a}</AccordionContent>
               </AccordionItem>
@@ -224,7 +224,7 @@ function PricingPage() {
       </Section>
 
       <Section tone="elev">
-        <div className="rounded-3xl border border-[#1A1A2E]/10 glass p-8 text-center md:p-14">
+        <div className="rounded-3xl border border-white/[0.06] glass p-8 text-center md:p-14">
           <h3 className="text-2xl font-bold md:text-4xl">Ready to apply?</h3>
           <div className="mt-6">
             <ApplyButton size="lg" />

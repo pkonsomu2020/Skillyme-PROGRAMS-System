@@ -2,12 +2,13 @@ import { Link } from "@tanstack/react-router";
 
 export function Footer() {
   return (
-    <footer className="border-t border-white/10 bg-[#0D1F2D] px-4 py-12 md:px-8 text-white">
+    <footer className="border-t border-white/[0.06] bg-[#070B1A] px-4 py-12 md:px-8 text-white">
       <div className="mx-auto max-w-7xl">
         <div className="grid gap-8 md:grid-cols-3">
           <div>
             <div className="flex items-center gap-2">
-              <img src="/logo.png" alt="Skillyme Africa Logo" className="h-6 w-auto object-contain" />
+              <img src="/nairobi-skyline.jpg" alt="" className="hidden" />
+              <div className="h-6 w-6 rounded-md amber-gradient" />
               <span className="font-bold">Skillyme Africa</span>
             </div>
             <p className="mt-3 text-sm text-white/70">
@@ -21,7 +22,7 @@ export function Footer() {
               <li><Link to="/about" className="hover:text-white">About Cohort 2</Link></li>
               <li><Link to="/organizers" className="hover:text-white">Organizers</Link></li>
               <li><Link to="/pricing" className="hover:text-white">Pricing</Link></li>
-              <li><a href="https://portal.skillyme.africa/apply" target="_blank" rel="noreferrer" className="hover:text-white">Apply Now</a></li>
+              <li><a href="https://skillyme-lms-system-ozjx.vercel.app/apply" target="_blank" rel="noreferrer" className="hover:text-white">Apply Now</a></li>
             </ul>
           </div>
           <div>
@@ -32,7 +33,7 @@ export function Footer() {
             </p>
           </div>
         </div>
-        <div className="mt-10 space-y-2 border-t border-white/10 pt-6 text-xs text-white/70">
+        <div className="mt-10 space-y-2 border-t border-white/[0.06] pt-6 text-xs text-white/70">
           <p>Skillyme Africa handles your personal data in line with Kenya's Data Protection Act, 2019.</p>
           <p>© 2026 Skillyme Africa. All rights reserved.</p>
         </div>

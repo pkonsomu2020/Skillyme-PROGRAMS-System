@@ -12,7 +12,7 @@ export function Section({
   className?: string;
   tone?: "deep" | "elev";
 }) {
-  const bg = tone === "elev" ? "bg-[#E8FAF6]" : "bg-[#F8F9FA]";
+  const bg = tone === "elev" ? "bg-[#0F1328]/80 backdrop-blur-sm" : "bg-[#070B1A]/70 backdrop-blur-sm";
   return (
     <section id={id} className={`section-pad px-4 md:px-8 ${bg} ${className}`}>
       <motion.div

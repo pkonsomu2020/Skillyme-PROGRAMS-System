@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Section, Eyebrow, H2 } from "@/components/site/Section";
 import { ExternalLink, Clock, Gift, Shield, ArrowRight } from "lucide-react";
 
-const APPLY_URL = "https://portal.skillyme.africa/apply";
+const APPLY_URL = "https://skillyme-lms-system-ozjx.vercel.app/apply";
 
 export const Route = createFileRoute("/apply")({
   head: () => ({
@@ -19,12 +19,12 @@ export const Route = createFileRoute("/apply")({
 function ApplyPage() {
   return (
     <>
-      <section className="border-b border-white/10 bg-[#0D1F2D] px-4 py-16 md:px-8 md:py-24 text-white">
+      <section className="border-b border-white/[0.06] bg-[#070B1A] px-4 py-16 md:px-8 md:py-24 text-white">
         <div className="mx-auto max-w-7xl">
           <Eyebrow>Application</Eyebrow>
           <h1 className="text-balance text-4xl font-extrabold leading-tight md:text-6xl">
             Apply for{" "}
-            <span className="bg-gradient-to-r from-[#1DB89A] to-[#0F9A7E] bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-[#00E0B8] to-[#7B3CFF] bg-clip-text text-transparent">
               Cohort 2
             </span>
           </h1>
@@ -37,7 +37,7 @@ function ApplyPage() {
               { icon: Gift, t: "Free to apply" },
               { icon: Shield, t: "100% IP retained" },
             ].map((b) => (
-              <div key={b.t} className="inline-flex items-center gap-2 rounded-full border border-[#1A1A2E]/10 bg-[#1A1A2E]/5 px-4 py-2 text-sm font-semibold">
+              <div key={b.t} className="inline-flex items-center gap-2 rounded-full border border-white/[0.06] bg-white/[0.03] px-4 py-2 text-sm font-semibold">
                 <b.icon size={14} className="text-primary" /> {b.t}
               </div>
             ))}
@@ -60,7 +60,7 @@ function ApplyPage() {
             Go to Application Portal <ArrowRight size={16} />
           </a>
           <p className="mt-4 text-sm text-muted-foreground">
-            Opens in a new tab · <ExternalLink size={12} className="inline" /> portal.skillyme.africa
+            Opens in a new tab · <ExternalLink size={12} className="inline" /> skillyme-lms-system-ozjx.vercel.app
           </p>
         </div>
       </Section>

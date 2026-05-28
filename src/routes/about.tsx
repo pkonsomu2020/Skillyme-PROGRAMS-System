@@ -29,11 +29,11 @@ function AboutPage() {
   return (
     <>
       {/* HERO */}
-      <section className="border-b border-white/10 bg-[#0D1F2D] px-4 py-20 md:px-8 md:py-28 text-white">
+      <section className="border-b border-white/[0.06] bg-[#070B1A] px-4 py-20 md:px-8 md:py-28 text-white">
         <div className="mx-auto max-w-7xl">
           <Eyebrow>The program</Eyebrow>
           <h1 className="text-balance text-4xl font-extrabold leading-tight md:text-6xl">
-            Cohort 2: <span className="bg-gradient-to-r from-[#1DB89A] to-[#0F9A7E] bg-clip-text text-transparent">Build Track</span>
+            Cohort 2: <span className="bg-gradient-to-r from-[#00E0B8] to-[#7B3CFF] bg-clip-text text-transparent">Build Track</span>
           </h1>
           <p className="mt-5 max-w-2xl text-lg text-muted-foreground md:text-xl">
             What it is, how it runs, and what it produces.
@@ -66,7 +66,7 @@ function AboutPage() {
             { n: "Group 2", t: "Early Builder", d: "You've started building but you've stalled — scope crept, the product drifted from a real need, or the team lacked direction. Your hardest week is Week 1: an honest diagnosis and the decision to refocus or pivot. From there you rebuild lean, aimed squarely at a first paying client, and ship a focused MVP." },
             { n: "Group 3", t: "Early Traction", d: "You have a working product and one or two clients but no repeatable way to win the next ten. Your six weeks focus on productising your offer, sharpening your pricing, and building a defined sales process — so growth stops depending on luck." },
           ].map((g) => (
-            <div key={g.n} className="rounded-3xl border border-[#1A1A2E]/10 bg-card p-7 shadow-elev">
+            <div key={g.n} className="rounded-3xl border border-white/[0.06] bg-card p-7 shadow-elev">
               <div className="text-xs font-bold uppercase tracking-wider text-primary">{g.n}</div>
               <h3 className="mt-2 text-2xl font-bold">{g.t}</h3>
               <p className="mt-4 text-sm leading-relaxed text-muted-foreground">{g.d}</p>
@@ -97,7 +97,7 @@ function AboutPage() {
               return (
                 <div
                   key={r.name}
-                  className="absolute -translate-x-1/2 -translate-y-1/2 rounded-xl border border-[#1A1A2E]/10 bg-card px-3 py-2 text-center text-[11px] font-semibold shadow-elev"
+                  className="absolute -translate-x-1/2 -translate-y-1/2 rounded-xl border border-white/[0.06] bg-card px-3 py-2 text-center text-[11px] font-semibold shadow-elev"
                   style={{ left: `${x}%`, top: `${y}%`, maxWidth: 120 }}
                 >
                   <r.icon className="mx-auto mb-1 text-primary" size={16} />
@@ -116,7 +116,7 @@ function AboutPage() {
           </div>
           <ul className="space-y-3">
             {ROLES.map((r) => (
-              <li key={r.name} className="flex items-start gap-3 rounded-xl border border-[#1A1A2E]/10 bg-card p-4">
+              <li key={r.name} className="flex items-start gap-3 rounded-xl border border-white/[0.06] bg-card p-4">
                 <r.icon className="mt-0.5 shrink-0 text-primary" size={20} />
                 <div>
                   <div className="text-sm font-bold">{r.name}</div>
@@ -137,7 +137,7 @@ function AboutPage() {
               ["Program-assisted placement.", "Remaining individuals — including specialists without an idea — are placed into teams that need them."],
               ["Final balancing pass.", "Every proposed team is checked against the builder-plus-commercial minimum and locked."],
             ].map(([t, d], i) => (
-              <li key={i} className="flex gap-4 rounded-2xl border border-[#1A1A2E]/10 bg-card p-5">
+              <li key={i} className="flex gap-4 rounded-2xl border border-white/[0.06] bg-card p-5">
                 <div className="amber-gradient flex h-10 w-10 shrink-0 items-center justify-center rounded-xl font-bold">{i + 1}</div>
                 <div>
                   <div className="text-base font-bold">{t}</div>
@@ -162,7 +162,7 @@ function AboutPage() {
             { t: "Saturday, 9:30 AM–12:00 PM EAT", h: "Workshop & cohort sync", d: "A hands-on workshop, a cross-team progress sync with peer accountability, and mentor office hours." },
             { t: "Between sessions", h: "Independent build work", d: "Teams build and log weekly milestone progress so facilitators can spot and support teams falling behind." },
           ].map((s) => (
-            <div key={s.h} className="rounded-2xl border border-[#1A1A2E]/10 bg-card p-6">
+            <div key={s.h} className="rounded-2xl border border-white/[0.06] bg-card p-6">
               <div className="text-xs font-bold uppercase tracking-wider text-primary">{s.t}</div>
               <h3 className="mt-2 text-lg font-bold">{s.h}</h3>
               <p className="mt-3 text-sm text-muted-foreground">{s.d}</p>
@@ -180,7 +180,7 @@ function AboutPage() {
             { d: "Day 1 — Demo Day (28 July)", t: "Teams pitch their MVPs and traction to a panel of investors and ecosystem judges, with a live product expo. Outcomes are assessed here." },
             { d: "Day 2 — Ecosystem Day (29 July)", t: "The broader, more public day: panels, partner showcases, investor speed-meetings, the alumni celebration, and the awards ceremony." },
           ].map((d) => (
-            <div key={d.d} className="rounded-2xl border border-[#1A1A2E]/10 bg-card p-7">
+            <div key={d.d} className="rounded-2xl border border-white/[0.06] bg-card p-7">
               <h3 className="text-xl font-bold">{d.d}</h3>
               <p className="mt-3 text-base text-muted-foreground">{d.t}</p>
             </div>
@@ -198,7 +198,7 @@ function AboutPage() {
         <p className="mt-3 text-lg text-muted-foreground">Real people. Real products. Real clients.</p>
         <div className="mt-10 grid gap-5 sm:grid-cols-2 md:grid-cols-3">
           {ALUMNI.map((i) => (
-            <div key={i} className="rounded-2xl border border-[#1A1A2E]/10 bg-card p-6 text-center shadow-elev">
+            <div key={i} className="rounded-2xl border border-white/[0.06] bg-card p-6 text-center shadow-elev">
               <div className="mx-auto h-20 w-20 rounded-full amber-gradient opacity-60" aria-hidden />
               <div className="mt-4 text-sm font-bold">[ALUMNI PERSON {i} — NAME]</div>
               <div className="mt-1 text-xs text-muted-foreground">[PRODUCT — one-line description]</div>
@@ -226,7 +226,7 @@ function AboutPage() {
       <Section>
         <CTABlock heading="Ready to build?">
           <ApplyButton size="lg" />
-          <Link to="/pricing" className="inline-flex items-center gap-2 rounded-full border border-[#1A1A2E]/15 bg-[#1A1A2E]/5 px-6 py-3.5 text-sm font-semibold hover:bg-[#1A1A2E]/10">
+          <Link to="/pricing" className="inline-flex items-center gap-2 rounded-full border border-white/[0.08] bg-white/[0.03] px-6 py-3.5 text-sm font-semibold hover:bg-white/[0.06]">
             See Pricing
           </Link>
         </CTABlock>

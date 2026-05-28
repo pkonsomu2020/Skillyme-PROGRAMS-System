@@ -108,7 +108,7 @@ function HomePage() {
             width={1920}
             height={1080}
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-[#0D1F2D]/50 via-[#0D1F2D]/85 to-[#0D1F2D]" />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#070B1A]/60 via-[#070B1A]/85 to-[#070B1A]" />
         </div>
         <div className="mx-auto max-w-7xl px-4 py-20 md:px-8 md:py-32 text-white">
           <motion.div
@@ -123,35 +123,38 @@ function HomePage() {
             </div>
             <h1 className="text-balance text-4xl font-extrabold leading-[1.05] tracking-tight sm:text-5xl md:text-7xl">
               Build a real product. <br className="hidden sm:block" />
-              <span className="bg-gradient-to-r from-[#1DB89A] to-[#0F9A7E] bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-[#00E0B8] to-[#7B3CFF] bg-clip-text text-transparent" style={{ textShadow: "0 0 40px rgba(123,60,255,0.3)" }}>
                 Land a real client.
               </span>{" "}
               In six weeks.
             </h1>
-            <p className="mt-6 max-w-2xl text-lg text-muted-foreground md:text-xl">
+            <p className="mt-6 max-w-2xl text-lg text-[#D9E2F2] md:text-xl">
               Skillyme Africa Cohort 2 is a selective build accelerator. We place you in a balanced team, you build and sell a real product — and you keep 100% of the IP.
             </p>
             <div className="mt-8 flex flex-wrap items-center gap-3">
               <ApplyButton size="lg" />
               <a
                 href="#how-it-works"
-                className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-6 py-3.5 text-sm font-semibold text-white backdrop-blur transition hover:bg-white/10"
+                className="inline-flex items-center gap-2 rounded-full border border-[#00E0B8] bg-transparent px-6 py-3.5 text-sm font-semibold text-[#00E0B8] backdrop-blur transition hover:bg-[#00E0B8]/[0.08]"
               >
                 How It Works
               </a>
             </div>
-            <p className="mt-5 text-sm text-muted-foreground">
+            <p className="mt-5 text-sm text-[#D9E2F2]/60">
               Applications close <span className="text-white">17 June 2026</span> · Limited cohort · Applying is free.
             </p>
           </motion.div>
         </div>
       </section>
 
+      {/* GRADIENT ACCENT LINE */}
+      <div className="accent-line" />
+
       {/* TRUST BAR */}
-      <div className="border-y border-white/10 bg-[#0D1F2D] px-4 py-8 md:px-8 text-white">
+      <div className="border-y border-white/[0.06] bg-[#0F1328] px-4 py-8 md:px-8 text-white">
         <div className="mx-auto grid max-w-7xl grid-cols-2 gap-6 text-center sm:grid-cols-3 md:grid-cols-6">
           {TRUST.map((t) => (
-            <div key={t} className="text-sm font-bold text-white md:text-base">{t}</div>
+            <div key={t} className="text-sm font-bold text-[#00E0B8] md:text-base">{t}</div>
           ))}
         </div>
       </div>
@@ -185,7 +188,7 @@ function HomePage() {
         <H2>Which stage are you at?</H2>
         <div className="mt-12 grid gap-6 md:grid-cols-3">
           {GROUPS.map((g) => (
-            <div key={g.n} className="group flex flex-col rounded-3xl border border-[#1A1A2E]/10 bg-card p-7 shadow-elev transition-transform hover:-translate-y-1">
+            <div key={g.n} className="group flex flex-col rounded-3xl border border-white/[0.06] bg-card p-7 shadow-elev transition-transform hover:-translate-y-1">
               <div className="amber-gradient inline-flex h-10 w-10 items-center justify-center rounded-xl text-sm font-bold">{g.n}</div>
               <h3 className="mt-5 text-2xl font-bold">Group {parseInt(g.n)} · {g.name}</h3>
               <p className="mt-3 text-sm font-medium text-foreground/90">{g.who}</p>
@@ -194,7 +197,7 @@ function HomePage() {
                 This is me
               </span>
               <a
-                href="https://portal.skillyme.africa/apply"
+                href="https://skillyme-lms-system-ozjx.vercel.app/apply"
                 target="_blank"
                 rel="noreferrer"
                 className="mt-6 inline-flex items-center gap-1 text-sm font-semibold text-primary hover:gap-2 transition-all"
@@ -212,7 +215,7 @@ function HomePage() {
         <H2>Why this program, not another one?</H2>
         <div className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
           {DIFFERENT.map((f) => (
-            <div key={f.title} className="rounded-2xl border border-[#1A1A2E]/10 bg-card p-6 shadow-elev">
+            <div key={f.title} className="rounded-2xl border border-white/[0.06] bg-card p-6 shadow-elev">
               <f.icon className="text-primary" size={28} />
               <h3 className="mt-4 text-lg font-bold">{f.title}</h3>
               <p className="mt-2 text-sm text-muted-foreground">{f.sub}</p>
@@ -227,9 +230,9 @@ function HomePage() {
         <H2>Six weeks. One MVP. One paying client.</H2>
         <div className="mt-12 grid gap-5 md:grid-cols-3 lg:grid-cols-6">
           {WEEKS.map((w, i) => (
-            <div key={w.w} className="relative rounded-2xl border border-[#1A1A2E]/10 bg-card p-5 shadow-elev">
+            <div key={w.w} className="relative rounded-2xl border border-white/[0.06] bg-card p-5 shadow-elev">
               <div className="text-xs font-bold uppercase tracking-wider text-primary">{w.w}</div>
-              <div className="absolute right-4 top-4 text-3xl font-extrabold text-[#1A1A2E]/10">{i + 1}</div>
+              <div className="absolute right-4 top-4 text-3xl font-extrabold text-white/10">{i + 1}</div>
               <h3 className="mt-2 text-base font-bold">{w.t}</h3>
               <p className="mt-2 text-xs leading-relaxed text-muted-foreground">{w.d}</p>
             </div>
@@ -246,7 +249,7 @@ function HomePage() {
         <H2>What you walk away with.</H2>
         <div className="mt-10 grid gap-4 md:grid-cols-2">
           {LEAVE.map((l) => (
-            <div key={l} className="flex items-start gap-3 rounded-xl border border-[#1A1A2E]/10 bg-card/60 p-5">
+            <div key={l} className="flex items-start gap-3 rounded-xl border border-white/[0.06] bg-card/60 p-5">
               <CheckCircle2 className="mt-0.5 shrink-0 text-primary" size={20} />
               <span className="text-sm font-medium md:text-base">{l}</span>
             </div>
@@ -260,7 +263,7 @@ function HomePage() {
         <H2>The timeline.</H2>
         <div className="mt-10 grid gap-4 md:grid-cols-6">
           {DATES.map((d, i) => (
-            <div key={d.d} className="rounded-2xl border border-[#1A1A2E]/10 bg-card p-5">
+            <div key={d.d} className="rounded-2xl border border-white/[0.06] bg-card p-5">
               <div className="text-xs font-semibold uppercase tracking-wider text-primary">Step {i + 1}</div>
               <div className="mt-2 text-lg font-bold">{d.d}</div>
               <div className="mt-1 text-sm text-muted-foreground">{d.t}</div>
@@ -294,7 +297,7 @@ function HomePage() {
         <H2>Simple, fair pricing. Pay only if you're accepted.</H2>
         <div className="mt-10 grid gap-5 md:grid-cols-3">
           {TIERS.map((t) => (
-            <div key={t.name} className="rounded-2xl border border-[#1A1A2E]/10 bg-card p-7 shadow-elev">
+            <div key={t.name} className="rounded-2xl border border-white/[0.06] bg-card p-7 shadow-elev">
               <h3 className="text-lg font-bold">{t.name}</h3>
               <p className="mt-3 text-3xl font-extrabold text-primary">{t.price}</p>
               <p className="mt-3 text-sm text-muted-foreground">{t.sub}</p>
@@ -318,7 +321,7 @@ function HomePage() {
         <div className="mt-10 mx-auto max-w-3xl">
           <Accordion type="single" collapsible className="space-y-3">
             {FAQ.map(([q, a], i) => (
-              <AccordionItem key={i} value={`f-${i}`} className="rounded-xl border border-[#1A1A2E]/10 bg-card px-5">
+              <AccordionItem key={i} value={`f-${i}`} className="rounded-xl border border-white/[0.06] bg-card px-5">
                 <AccordionTrigger className="text-left text-sm font-semibold md:text-base">{q}</AccordionTrigger>
                 <AccordionContent className="text-sm text-muted-foreground">{a}</AccordionContent>
               </AccordionItem>
