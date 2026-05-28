@@ -197,7 +197,7 @@ function HomePage() {
                 This is me
               </span>
               <a
-                href="https://skillyme-lms-system-ozjx.vercel.app/apply"
+                href="https://portal.skillyme.africa/apply"
                 target="_blank"
                 rel="noreferrer"
                 className="mt-6 inline-flex items-center gap-1 text-sm font-semibold text-primary hover:gap-2 transition-all"

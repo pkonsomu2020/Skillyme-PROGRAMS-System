@@ -60,7 +60,7 @@ function ApplyPage() {
             Go to Application Portal <ArrowRight size={16} />
           </a>
           <p className="mt-4 text-sm text-muted-foreground">
-            Opens in a new tab · <ExternalLink size={12} className="inline" /> skillyme-lms-system-ozjx.vercel.app
+            Opens in a new tab · <ExternalLink size={12} className="inline" /> portal.skillyme.africa
           </p>
         </div>
       </Section>
