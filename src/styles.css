@@ -1,0 +1,118 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap");
+@import "tailwindcss" source(none);
+@import "tw-animate-css";
+@source "../src";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-surface-deep: var(--surface-deep);
+  --color-surface-elev: var(--surface-elev);
+  --color-surface-dark: var(--surface-dark);
+  --font-sans: "Plus Jakarta Sans", "Inter", system-ui, sans-serif;
+}
+
+:root {
+  --radius: 0.875rem;
+  --background: #F8F9FA;
+  --foreground: #1A1A2E;
+  --card: #FFFFFF;
+  --card-foreground: #1A1A2E;
+  --popover: #FFFFFF;
+  --popover-foreground: #1A1A2E;
+  --primary: #1DB89A;
+  --primary-foreground: #FFFFFF;
+  --secondary: #F1F5F9;
+  --secondary-foreground: #1A1A2E;
+  --muted: #F1F5F9;
+  --muted-foreground: #64748B;
+  --accent: #F04E37;
+  --accent-foreground: #FFFFFF;
+  --destructive: #F04E37;
+  --destructive-foreground: #FFFFFF;
+  --border: rgba(26, 26, 46, 0.1);
+  --input: rgba(26, 26, 46, 0.1);
+  --ring: #1DB89A;
+  --chart-1: #1DB89A;
+  --chart-2: #0F9A7E;
+  --chart-3: #F04E37;
+  --chart-4: #2DD4BF;
+  --chart-5: #E8FAF6;
+
+  --surface-deep: #F8F9FA;
+  --surface-elev: #E8FAF6;
+  --surface-dark: #0D1F2D;
+  --gradient-primary: linear-gradient(135deg, #1DB89A, #0F9A7E);
+  --shadow-glow: 0 20px 60px -20px rgba(29, 184, 154, 0.35);
+  --shadow-elev: 0 10px 40px -12px rgba(0, 0, 0, 0.12);
+}
+
+@layer base {
+  * { border-color: var(--color-border); }
+  html { scroll-behavior: smooth; }
+  body {
+    background-color: var(--surface-deep);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+  h1, h2, h3, h4, h5 {
+    font-family: var(--font-sans);
+    letter-spacing: -0.025em;
+    font-weight: 700;
+  }
+  :focus-visible {
+    outline: 2px solid var(--primary);
+    outline-offset: 2px;
+  }
+}
+
+@layer utilities {
+  .text-balance { text-wrap: balance; }
+  .glass {
+    background: color-mix(in oklab, var(--surface-elev) 70%, transparent);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border: 1px solid rgba(26, 26, 46, 0.08);
+  }
+  .amber-gradient {
+    background: var(--gradient-primary);
+    color: var(--primary-foreground);
+  }
+  .shadow-glow { box-shadow: var(--shadow-glow); }
+  .shadow-elev { box-shadow: var(--shadow-elev); }
+  .section-pad { padding-top: 4rem; padding-bottom: 4rem; }
+  @media (min-width: 768px) {
+    .section-pad { padding-top: 6rem; padding-bottom: 6rem; }
+  }
+}

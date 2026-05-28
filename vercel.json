@@ -1,0 +1,7 @@
+{
+  "version": 2,
+  "alias": [
+    "programs.skillyme.africa"
+  ],
+  "framework": "vite"
+}
