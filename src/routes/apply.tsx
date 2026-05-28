@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Section, Eyebrow, H2 } from "@/components/site/Section";
 import { ExternalLink, Clock, Gift, Shield, ArrowRight } from "lucide-react";
 
-const APPLY_URL = "https://skillyme-lms-system-ozjx.vercel.app/apply";
+const APPLY_URL = "https://portal.skillyme.africa/apply";
 
 export const Route = createFileRoute("/apply")({
   head: () => ({

@@ -37,7 +37,7 @@ export function Header() {
 
         <div className="flex items-center gap-2">
           <a
-            href="https://skillyme-lms-system-ozjx.vercel.app/apply"
+            href="https://portal.skillyme.africa/apply"
             target="_blank"
             rel="noreferrer"
             className="hidden rounded-full amber-gradient px-5 py-2.5 text-sm font-semibold shadow-glow transition-transform hover:scale-[1.03] md:inline-block"
@@ -45,7 +45,7 @@ export function Header() {
             Apply Now
           </a>
           <a
-            href="https://skillyme-lms-system-ozjx.vercel.app/apply"
+            href="https://portal.skillyme.africa/apply"
             target="_blank"
             rel="noreferrer"
             className="rounded-full amber-gradient px-4 py-2 text-xs font-semibold shadow-glow md:hidden"

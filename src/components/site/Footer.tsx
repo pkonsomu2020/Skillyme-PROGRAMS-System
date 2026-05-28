@@ -22,7 +22,7 @@ export function Footer() {
               <li><Link to="/about" className="hover:text-white">About Cohort 2</Link></li>
               <li><Link to="/organizers" className="hover:text-white">Organizers</Link></li>
               <li><Link to="/pricing" className="hover:text-white">Pricing</Link></li>
-              <li><a href="https://skillyme-lms-system-ozjx.vercel.app/apply" target="_blank" rel="noreferrer" className="hover:text-white">Apply Now</a></li>
+              <li><a href="https://portal.skillyme.africa/apply" target="_blank" rel="noreferrer" className="hover:text-white">Apply Now</a></li>
             </ul>
           </div>
           <div>

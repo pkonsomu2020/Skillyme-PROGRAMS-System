@@ -1,6 +1,6 @@
 import { ArrowRight, ExternalLink } from "lucide-react";
 
-const APPLY_URL = "https://skillyme-lms-system-ozjx.vercel.app/apply";
+const APPLY_URL = "https://portal.skillyme.africa/apply";
 
 export function ApplyButton({ size = "md", label = "Apply Now" }: { size?: "md" | "lg"; label?: string }) {
   const sz = size === "lg" ? "px-7 py-4 text-base" : "px-6 py-3 text-sm";
