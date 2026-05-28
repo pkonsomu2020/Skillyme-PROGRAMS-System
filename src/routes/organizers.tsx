@@ -46,8 +46,8 @@ const CHIROMO_TEAM = [
   {
     name: "Osborn Nyakaru",
     role: "CEO",
-    photo: null,
-    linkedin: null,
+    photo: "/ORGANIZERS/OSBORN_NYAKARU.jpeg",
+    linkedin: "https://www.linkedin.com/in/nyakaruosborn/",
   },
   {
     name: "Vera",
@@ -59,10 +59,10 @@ const CHIROMO_TEAM = [
 
 const AUSTROUNE_TEAM = [
   {
-    name: "Dancun",
+    name: "Dancun Santiago",
     role: "Founder",
     photo: "/ORGANIZERS/DANCUN.jpeg",
-    linkedin: null,
+    linkedin: "https://www.linkedin.com/company/astroune/"
   },
 ];
 

@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Section, Eyebrow, H2 } from "@/components/site/Section";
 import { ApplyButton, CTABlock } from "@/components/site/CTA";
-import { Award, Hammer, TrendingUp, Settings, BookOpen, Linkedin } from "lucide-react";
+import { Award, Hammer, TrendingUp, Settings, BookOpen } from "lucide-react";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
@@ -22,8 +22,6 @@ const ROLES = [
   { icon: Settings, name: "Product / Operations", desc: "runs the team and delivery" },
   { icon: BookOpen, name: "Domain Expert", desc: "deep sector and customer knowledge" },
 ];
-
-const ALUMNI = Array.from({ length: 6 }, (_, i) => i + 1);
 
 function AboutPage() {
   return (
@@ -188,37 +186,6 @@ function AboutPage() {
         </div>
         <p className="mt-8 rounded-xl border border-primary/30 bg-primary/10 p-5 text-center text-base font-semibold">
           Awards: Best MVP · Best Traction · Best Team · People's Choice.
-        </p>
-      </Section>
-
-      {/* ALUMNI */}
-      <Section tone="elev">
-        <Eyebrow>Cohort 1</Eyebrow>
-        <H2>Meet the builders who came before you.</H2>
-        <p className="mt-3 text-lg text-muted-foreground">Real people. Real products. Real clients.</p>
-        <div className="mt-10 grid gap-5 sm:grid-cols-2 md:grid-cols-3">
-          {ALUMNI.map((i) => (
-            <div key={i} className="rounded-2xl border border-white/[0.06] bg-card p-6 text-center shadow-elev">
-              <div className="mx-auto h-20 w-20 rounded-full amber-gradient opacity-60" aria-hidden />
-              <div className="mt-4 text-sm font-bold">[ALUMNI PERSON {i} — NAME]</div>
-              <div className="mt-1 text-xs text-muted-foreground">[PRODUCT — one-line description]</div>
-              <div className="mt-2 text-xs text-primary">[OUTCOME]</div>
-              <a href="#" className="mt-3 inline-flex items-center gap-1 text-xs text-muted-foreground hover:text-primary">
-                <Linkedin size={14} /> LinkedIn
-              </a>
-            </div>
-          ))}
-        </div>
-        <p className="mt-6 text-center text-sm text-muted-foreground">More alumni stories coming soon.</p>
-
-        <blockquote className="mx-auto mt-12 max-w-3xl rounded-3xl border-l-4 border-primary bg-card/60 p-8 text-xl font-medium italic leading-relaxed md:text-2xl">
-          "[ALUMNI QUOTE — e.g., 'I came in with an idea and left with a paying customer and a co-founder. The team matching changed everything.']"
-          <footer className="mt-4 text-sm not-italic font-semibold text-muted-foreground">
-            — [NAME], [PRODUCT], Cohort 1
-          </footer>
-        </blockquote>
-        <p className="mt-8 text-center text-sm text-muted-foreground">
-          Cohort 2 builders join this alumni community on completion.
         </p>
       </Section>
 
