@@ -165,9 +165,16 @@ function OrganizersPage() {
 
         {/* Austroune Group block */}
         <div className="mt-8 rounded-3xl border border-white/[0.06] bg-card p-7 shadow-elev md:p-10">
-          <div>
-            <h3 className="text-2xl font-bold">Austroune Group</h3>
-            <p className="mt-0.5 text-sm font-semibold text-primary">Co-organiser & Core Facilitator</p>
+          <div className="flex items-center gap-4">
+            <img
+              src="/ORGANIZERS/Astroune.com_LOGO.jpeg"
+              alt="Austroune Group"
+              className="h-14 w-14 rounded-2xl object-cover"
+            />
+            <div>
+              <h3 className="text-2xl font-bold">Austroune Group</h3>
+              <p className="mt-0.5 text-sm font-semibold text-primary">Co-organiser & Core Facilitator</p>
+            </div>
           </div>
           <p className="mt-5 text-sm leading-relaxed text-muted-foreground">
             The Austroune Group founder brings practising founder experience to the program — real stories of what works and what doesn't, from the inside of a running startup.
