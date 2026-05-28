@@ -1,6 +1,8 @@
 {
   "version": 2,
-  "alias": [
-    "programs.skillyme.africa"
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist",
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/index.html" }
   ]
 }
