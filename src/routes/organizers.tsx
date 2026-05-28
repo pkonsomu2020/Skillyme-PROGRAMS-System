@@ -18,7 +18,7 @@ export const Route = createFileRoute("/organizers")({
 function OrganizersPage() {
   return (
     <>
-      <section className="border-b border-white/10 bg-[#0D1F2D] px-4 py-20 md:px-8 md:py-28 text-white">
+      <section className="border-b border-white/[0.06] bg-[#070B1A] px-4 py-20 md:px-8 md:py-28 text-white">
         <div className="mx-auto max-w-7xl">
           <Eyebrow>The team</Eyebrow>
           <h1 className="text-balance text-4xl font-extrabold leading-tight md:text-6xl">
@@ -33,25 +33,30 @@ function OrganizersPage() {
       {/* LEAD */}
       <Section>
         <Eyebrow>Lead organizer</Eyebrow>
-        <div className="mt-6 grid gap-8 rounded-3xl border border-[#1A1A2E]/10 bg-card p-8 shadow-elev md:grid-cols-3 md:p-10">
-          <div className="flex justify-center md:justify-start">
-            <div className="h-44 w-44 rounded-2xl amber-gradient opacity-60" aria-label="[YOUR PHOTO]" />
-          </div>
-          <div className="md:col-span-2">
-            <h2 className="text-3xl font-bold">[YOUR FULL NAME]</h2>
-            <p className="mt-1 text-base text-primary">[YOUR TITLE — e.g., Founder / Program Director, Skillyme Africa]</p>
-            <p className="mt-5 text-base leading-relaxed text-muted-foreground">
-              [YOUR 3–4 SENTENCE BIO — your background, what you've built, and why you created Skillyme Africa]
-            </p>
-            <div className="mt-6 flex flex-wrap gap-3">
-              <a href="[YOUR LINKEDIN URL]" className="inline-flex items-center gap-2 rounded-full amber-gradient px-5 py-2.5 text-sm font-semibold shadow-glow">
-                <Linkedin size={16} /> LinkedIn
-              </a>
-              <a href="#" className="inline-flex items-center gap-2 rounded-full border border-[#1A1A2E]/15 bg-[#1A1A2E]/5 px-5 py-2.5 text-sm font-semibold hover:bg-[#1A1A2E]/10">
-                <ExternalLink size={16} /> [X / personal site]
-              </a>
+        <H2>Lead Organizers.</H2>
+        <div className="mt-8 grid gap-6 md:grid-cols-2">
+          {[1, 2].map((i) => (
+            <div key={i} className="rounded-3xl border border-white/[0.06] bg-card p-8 shadow-elev">
+              <div className="flex items-start gap-6">
+                <div className="h-28 w-28 shrink-0 rounded-2xl amber-gradient opacity-60" aria-label={`[LEAD ORGANIZER ${i} PHOTO]`} />
+                <div className="flex-1">
+                  <h3 className="text-2xl font-bold">[LEAD ORGANIZER {i} — FULL NAME]</h3>
+                  <p className="mt-1 text-sm text-primary">[TITLE / ROLE]</p>
+                </div>
+              </div>
+              <p className="mt-5 text-base leading-relaxed text-muted-foreground">
+                [3–4 SENTENCE BIO — background, what they've built, and their role in Skillyme Africa]
+              </p>
+              <div className="mt-6 flex flex-wrap gap-3">
+                <a href="[LINKEDIN URL]" className="inline-flex items-center gap-2 rounded-full amber-gradient px-5 py-2.5 text-sm font-semibold shadow-glow">
+                  <Linkedin size={16} /> LinkedIn
+                </a>
+                <a href="#" className="inline-flex items-center gap-2 rounded-full border border-white/[0.08] bg-white/[0.03] px-5 py-2.5 text-sm font-semibold hover:bg-white/[0.06]">
+                  <ExternalLink size={16} /> [X / personal site]
+                </a>
+              </div>
             </div>
-          </div>
+          ))}
         </div>
       </Section>
 
@@ -59,23 +64,25 @@ function OrganizersPage() {
       <Section tone="elev">
         <Eyebrow>Partners on the ground</Eyebrow>
         <H2>Co-organisers & Core Facilitators.</H2>
-        <div className="mt-10 grid gap-6 md:grid-cols-2">
+        <div className="mt-10 space-y-10">
           {[
             {
               name: "Chiromo Forge",
               role: "Co-organiser & Core Facilitator",
               desc: "Chiromo Forge is an operating startup studio. Facilitation comes from people who are currently building companies, not from a curriculum binder. They bring hands-on studio methodology and real operator insight to every session.",
               link: "[CHIROMO FORGE LINKEDIN OR WEBSITE]",
+              slots: 4,
             },
             {
               name: "Austroune Group (Founder)",
               role: "Co-organiser & Core Facilitator",
               desc: "The Austroune Group founder brings practising founder experience to the program — real stories of what works and what doesn't, from the inside of a running startup.",
               link: "[AUSTROUNE GROUP LINKEDIN OR WEBSITE]",
+              slots: 1,
             },
           ].map((p) => (
-            <div key={p.name} className="rounded-3xl border border-[#1A1A2E]/10 bg-card p-7 shadow-elev">
-              <div className="flex h-16 w-16 items-center justify-center rounded-2xl border border-[#1A1A2E]/10 bg-[#1A1A2E]/5 text-[10px] text-muted-foreground">
+            <div key={p.name} className="rounded-3xl border border-white/[0.06] bg-card p-7 shadow-elev">
+              <div className="flex h-16 w-16 items-center justify-center rounded-2xl border border-white/[0.06] bg-white/[0.03] text-[10px] text-muted-foreground">
                 [LOGO]
               </div>
               <h3 className="mt-5 text-2xl font-bold">{p.name}</h3>
@@ -84,6 +91,24 @@ function OrganizersPage() {
               <a href={p.link} className="mt-5 inline-flex items-center gap-2 rounded-full border border-primary/40 bg-primary/10 px-4 py-2 text-xs font-semibold text-primary">
                 <Linkedin size={14} /> Visit
               </a>
+
+              <div className="mt-7 border-t border-white/[0.06] pt-6">
+                <div className="text-xs font-bold uppercase tracking-wider text-primary">
+                  {p.slots > 1 ? `Team (${p.slots})` : "Lead"}
+                </div>
+                <div className={`mt-4 grid gap-4 ${p.slots === 1 ? "sm:grid-cols-1 md:max-w-xs" : "sm:grid-cols-2 lg:grid-cols-4"}`}>
+                  {Array.from({ length: p.slots }).map((_, i) => (
+                    <div key={i} className="rounded-2xl border border-white/[0.06] bg-white/[0.03] p-5 text-center">
+                      <div className="mx-auto h-16 w-16 rounded-full amber-gradient opacity-60" />
+                      <div className="mt-3 text-sm font-bold">[{p.name} — PERSON {i + 1} NAME]</div>
+                      <div className="mt-1 text-xs text-muted-foreground">[Role / Title]</div>
+                      <a href="#" className="mt-2 inline-flex items-center gap-1 text-xs text-muted-foreground hover:text-primary">
+                        <Linkedin size={12} /> LinkedIn
+                      </a>
+                    </div>
+                  ))}
+                </div>
+              </div>
             </div>
           ))}
         </div>
@@ -93,9 +118,9 @@ function OrganizersPage() {
       <Section>
         <Eyebrow>Program partners</Eyebrow>
         <H2>Program Partners.</H2>
-        <div className="mt-10 rounded-3xl border border-[#1A1A2E]/10 bg-card p-7 shadow-elev md:p-10">
+        <div className="mt-10 rounded-3xl border border-white/[0.06] bg-card p-7 shadow-elev md:p-10">
           <div className="grid gap-8 md:grid-cols-3">
-            <div className="flex h-24 items-center justify-center rounded-2xl border border-[#1A1A2E]/10 bg-[#1A1A2E]/5 text-xs text-muted-foreground">
+            <div className="flex h-24 items-center justify-center rounded-2xl border border-white/[0.06] bg-white/[0.03] text-xs text-muted-foreground">
               [BRICKLABS.AI LOGO]
             </div>
             <div className="md:col-span-2">
@@ -108,7 +133,7 @@ function OrganizersPage() {
                 <a href="https://bricklabsai.org" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-full amber-gradient px-5 py-2.5 text-sm font-semibold shadow-glow">
                   <ExternalLink size={16} /> bricklabsai.org
                 </a>
-                <a href="[BRICKLABS.AI LINKEDIN OR X]" className="inline-flex items-center gap-2 rounded-full border border-[#1A1A2E]/15 bg-[#1A1A2E]/5 px-5 py-2.5 text-sm font-semibold hover:bg-[#1A1A2E]/10">
+                <a href="[BRICKLABS.AI LINKEDIN OR X]" className="inline-flex items-center gap-2 rounded-full border border-white/[0.08] bg-white/[0.03] px-5 py-2.5 text-sm font-semibold hover:bg-white/[0.06]">
                   <Linkedin size={16} /> Social
                 </a>
               </div>
@@ -126,7 +151,7 @@ function OrganizersPage() {
         </p>
         <div className="mt-10 grid gap-5 sm:grid-cols-2 md:grid-cols-4">
           {Array.from({ length: 8 }).map((_, i) => (
-            <div key={i} className="rounded-2xl border border-[#1A1A2E]/10 bg-card p-5 text-center">
+            <div key={i} className="rounded-2xl border border-white/[0.06] bg-card p-5 text-center">
               <div className="mx-auto h-16 w-16 rounded-full amber-gradient opacity-50" />
               <div className="mt-3 text-sm font-bold">[Mentor Name]</div>
               <div className="mt-1 text-xs text-muted-foreground">[Area of expertise]</div>
@@ -141,7 +166,7 @@ function OrganizersPage() {
 
       <Section>
         <CTABlock heading="Have questions? Get in touch.">
-          <a href="mailto:[CONTACT EMAIL]" className="inline-flex items-center gap-2 rounded-full border border-[#1A1A2E]/15 bg-[#1A1A2E]/5 px-6 py-3.5 text-sm font-semibold hover:bg-[#1A1A2E]/10">
+          <a href="mailto:[CONTACT EMAIL]" className="inline-flex items-center gap-2 rounded-full border border-white/[0.08] bg-white/[0.03] px-6 py-3.5 text-sm font-semibold hover:bg-white/[0.06]">
             <Mail size={16} /> [CONTACT EMAIL]
           </a>
           <ApplyButton size="lg" />
