@@ -52,8 +52,8 @@ const CHIROMO_TEAM = [
   {
     name: "Vera",
     role: "CTO",
-    photo: null,
-    linkedin: null,
+    photo: "/ORGANIZERS/VERA.jpeg",
+    linkedin: "https://www.linkedin.com/in/veranyagaka?utm_source=share_via&utm_content=profile&utm_medium=member_android",
   },
 ];
 
