@@ -27,7 +27,7 @@ export function Footer() {
           </div>
           <div>
             <h4 className="mb-3 text-sm font-semibold uppercase tracking-wider text-primary">Contact</h4>
-            <p className="text-sm text-white/70">[CONTACT EMAIL]</p>
+            <p className="text-sm text-white/70">info@skillyme.africa</p>
             <p className="mt-4 text-sm text-white/70">
               In partnership with Chiromo Forge, Austroune Group and Bricklabs.AI.
             </p>
